@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monisha Panchakalla Satya — Applied AI Product Engineer</title>
+<meta name="description" content="Portfolio of Monisha Panchakalla Satya, Applied AI Product Engineer specializing in LLM applications, AI automation, and full-stack AI prototyping.">
+<style>
+  :root{
+    --bg:#0b0f1a; --bg2:#111830; --card:#151d38; --line:rgba(148,163,255,.14);
+    --text:#e8ecff; --muted:#9aa3c7; --accent:#7c8cff; --accent2:#38d6c5;
+    --radius:16px; --max:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:"Inter","Segoe UI",system-ui,-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:rgba(11,15,26,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-weight:800;letter-spacing:.4px;font-size:1.05rem;color:var(--text)}
+  .brand span{color:var(--accent2)}
+  nav ul{display:flex;gap:22px;list-style:none}
+  nav ul a{color:var(--muted);font-size:.92rem;font-weight:600}
+  nav ul a:hover{color:var(--text);text-decoration:none}
+  @media(max-width:720px){nav ul{display:none}}
+  /* HERO */
+  .hero{padding:96px 0 72px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:-20%;background:
+    radial-gradient(600px 320px at 15% 20%,rgba(124,140,255,.16),transparent 60%),
+    radial-gradient(560px 300px at 85% 30%,rgba(56,214,197,.12),transparent 60%);pointer-events:none}
+  .hero .wrap{position:relative}
+  .kicker{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px}
+  h1{font-size:clamp(2.4rem,5.4vw,4rem);line-height:1.08;letter-spacing:-1px;margin-bottom:14px}
+  h1 .grad{background:linear-gradient(92deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tagline{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);max-width:760px;margin-bottom:30px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+  .btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:700;font-size:.95rem;border:1px solid var(--line);color:var(--text);background:var(--card)}
+  .btn:hover{text-decoration:none;transform:translateY(-1px)}
+  .btn.primary{background:linear-gradient(92deg,var(--accent),#5a6cf0);border:none;color:#fff}
+  .contact-line{color:var(--muted);font-size:.95rem}
+  .contact-line a{color:var(--text);font-weight:600}
+  /* SECTIONS */
+  section{padding:64px 0}
+  .sec-head{font-size:.8rem;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:var(--accent2);margin-bottom:14px}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.5px;margin-bottom:18px}
+  .lead{color:var(--muted);max-width:820px;font-size:1.05rem}
+  /* SKILLS */
+  .grid{display:grid;gap:18px}
+  .skills{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:26px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .card h3{font-size:1.02rem;margin-bottom:12px;color:var(--accent)}
+  .pills{display:flex;flex-wrap:wrap;gap:8px}
+  .pill{font-size:.82rem;background:rgba(124,140,255,.1);border:1px solid var(--line);color:var(--text);padding:6px 12px;border-radius:999px}
+  /* EXPERIENCE */
+  .job{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;margin-top:8px}
+  .job-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+  .job h3{font-size:1.25rem}
+  .job .role{color:var(--accent2);font-weight:700;margin-bottom:4px}
+  .job .dates{color:var(--muted);font-size:.9rem;white-space:nowrap}
+  .job ul{margin:14px 0 0 20px;color:var(--muted)}
+  .job ul li{margin-bottom:10px}
+  .job ul li::marker{color:var(--accent)}
+  /* PROJECTS */
+  .projects{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:26px}
+  .proj{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column}
+  .proj h3{font-size:1.15rem;margin-bottom:4px}
+  .proj .sub{color:var(--accent2);font-size:.88rem;font-weight:700;margin-bottom:12px}
+  .proj ul{margin:0 0 0 18px;color:var(--muted);font-size:.94rem}
+  .proj ul li{margin-bottom:8px}
+  /* EDUCATION */
+  .edu{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:26px}
+  .edu .card h3{color:var(--text)}
+  .edu .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+  .lang{margin-top:26px;color:var(--muted)}
+  .lang strong{color:var(--text)}
+  /* FOOTER */
+  footer{border-top:1px solid var(--line);padding:44px 0 54px;margin-top:20px}
+  footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+  footer p{color:var(--muted);font-size:.92rem}
+  .avail{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:700;color:var(--accent2);border:1px solid rgba(56,214,197,.35);padding:8px 16px;border-radius:999px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Monisha<span>.</span></div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Portfolio</div>
+    <h1>Monisha Panchakalla Satya<br><span class="grad">Applied AI Product Engineer</span></h1>
+    <p class="tagline">I turn operational problems and product ideas into working AI-enabled applications, analytics systems, and automation workflows — from rapid prototype to deployed product.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:satyaam.official@gmail.com">Get in touch</a>
+      <a class="btn" href="https://github.com/satyamonisha2018-cloud" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="contact-line">Worcester, MA · Open to relocate anywhere in the USA · <a href="mailto:satyaam.official@gmail.com">satyaam.official@gmail.com</a> · <a href="tel:+15134436568">+1 (513) 443-6568</a></p>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">About</div>
+    <h2>Building practical AI products, fast</h2>
+    <p class="lead">Applied AI Product Engineer with hands-on experience turning operational problems and product ideas into working AI-enabled applications, analytics systems, and automation workflows. Strong in Python, SQL, product thinking, AI-assisted software development, and rapid prototyping with Claude Code and Codex. I build end-to-end solutions using LLM APIs, local Ollama models, Supabase, vector/semantic retrieval, Vercel, and modern web stacks — with an emphasis on practical usability, privacy, deterministic business logic, and fast iteration from idea through deployment.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">Skills</div>
+    <h2>What I work with</h2>
+    <div class="grid skills">
+      <div class="card">
+        <h3>Applied AI</h3>
+        <div class="pills">
+          <span class="pill">LLM application development</span><span class="pill">AI automation</span><span class="pill">Prompt engineering</span><span class="pill">Structured outputs</span><span class="pill">Semantic / vector search</span><span class="pill">Local LLMs (Ollama)</span><span class="pill">RAG fundamentals</span><span class="pill">Agentic workflow design</span><span class="pill">Claude Code</span><span class="pill">Codex</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Programming &amp; Data</h3>
+        <div class="pills">
+          <span class="pill">Python</span><span class="pill">SQL</span><span class="pill">JavaScript / TypeScript</span><span class="pill">REST APIs</span><span class="pill">FastAPI</span><span class="pill">SQLite</span><span class="pill">Data modeling</span><span class="pill">Analytics logic</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Product Stack</h3>
+        <div class="pills">
+          <span class="pill">React / Next.js</span><span class="pill">Supabase</span><span class="pill">Vercel</span><span class="pill">Git / GitHub</span><span class="pill">Local-first architecture</span><span class="pill">API integrations</span><span class="pill">Dashboard development</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Business &amp; Product</h3>
+        <div class="pills">
+          <span class="pill">Rapid prototyping</span><span class="pill">Requirements discovery</span><span class="pill">Workflow automation</span><span class="pill">Operations analytics</span><span class="pill">Profitability analysis</span><span class="pill">Product ideation</span><span class="pill">Troubleshooting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">Experience</div>
+    <h2>Where I've worked</h2>
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <h3>Noor Holdings LLC</h3>
+          <div class="role">Data Engineer — Applied AI &amp; Automation</div>
+        </div>
+        <div class="dates">May 2024 – Present</div>
+      </div>
+      <ul>
+        <li>Contributed from company setup onward, including business registration, D-U-N-S setup, third-party service coordination, operational systems, accounting support, data analysis, and continuous identification of opportunities for automation and new product ideas.</li>
+        <li>Built and deployed operational dashboards for car-rental and property activities, centralizing revenue, expenses, utilization, recurring costs, profitability, and trend analysis into decision-focused views.</li>
+        <li>Designed Hankar, an internal business operations and intelligence workflow that connects expense/income logging directly to Supabase-backed dashboards — no manual relaying of transactions before reports update.</li>
+        <li>Automated recurring operating expenses such as insurance so new monthly periods populate expected costs automatically, integrated with live expense and revenue data.</li>
+        <li>Implemented analytics for gross revenue, operating expenses, net profit, investment break-even, revenue growth, seasonality, and day-of-week patterns — making underperforming periods and business gaps visible without manual analysis.</li>
+        <li>Used Claude Code and Codex to rapidly translate business requirements into working applications, iterate on UI and logic, debug issues, and deploy dashboards and tools to Vercel, with Supabase as the primary application data layer.</li>
+        <li>Applied local Ollama models in privacy-sensitive prototypes where business data stays on-device, and external LLM APIs where cloud inference fits the product experience.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">Projects</div>
+    <h2>Selected AI products</h2>
+    <div class="grid projects">
+      <div class="proj">
+        <h3>Lucy</h3>
+        <div class="sub">Personal AI Assistant / Knowledge OS</div>
+        <ul>
+          <li>Co-built a personal AI assistant that captures and self-organizes notes, links, tasks, reminders, habits, deadlines, and contextual information — surfacing relevant insights and notifications instead of acting as a static notes app.</li>
+          <li>Designed a local-first memory architecture with structured storage and encrypted local data, plus optional cloud-model assistance for deeper reasoning — focused on inspectable memory, contextual retrieval, and reliable user control.</li>
+          <li>Worked across product architecture, mobile experience, testing, prompting, memory behavior, and iterative feature development using an AI-assisted engineering workflow.</li>
+        </ul>
+      </div>
+      <div class="proj">
+        <h3>VibeFlow</h3>
+        <div class="sub">Privacy-First Voice-to-Text</div>
+        <ul>
+          <li>Co-built a cross-platform voice-to-text product focused on privacy, fast capture, and low-friction text entry across desktop and mobile workflows.</li>
+          <li>Used on-device/offline speech recognition and local Ollama-based grammar and context refinement on desktop, with optional cloud LLM refinement for higher-quality processing.</li>
+          <li>Designed so raw voice input can remain local for privacy-sensitive use cases while supporting configurable model and language workflows.</li>
+        </ul>
+      </div>
+      <div class="proj">
+        <h3>Trace</h3>
+        <div class="sub">Smart Expense, Journey &amp; Personal Finance Assistant</div>
+        <ul>
+          <li>Built an expense and activity tracking application combining structured finance logging with an AI assistant that surfaces useful insights — without relying on an LLM for core financial calculations.</li>
+          <li>Implemented deterministic, auditable calculations for financial totals and trends, plus vector/semantic retrieval to answer natural-language questions over stored user data.</li>
+          <li>Added journey tracking with start/end context, integrating expense, goals, and activity information into a single everyday decision-support experience.</li>
+        </ul>
+      </div>
+      <div class="proj">
+        <h3>Restaurant AI Phone Ordering Agent</h3>
+        <div class="sub">Local-First Voice AI Prototype</div>
+        <ul>
+          <li>Co-designing a multilingual AI phone-ordering assistant for restaurants to handle overflow calls — keeping menu, cart, pricing, and order-state logic deterministic rather than delegating critical calculations to the LLM.</li>
+          <li>Prototyped around Python/FastAPI, SQLite, Ollama/local models, speech recognition and synthesis, with Toast POS integration planning and support targets spanning English, Telugu, Tamil, and Spanish.</li>
+          <li>Benchmarked local models and explored structured decision/state handling to improve reliability for multi-turn ordering flows while balancing privacy, latency, and model capability.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head">Education</div>
+    <h2>Background</h2>
+    <div class="edu">
+      <div class="card">
+        <h3>M.S. Computer Science (Big Data)</h3>
+        <div class="meta">Clark University · Worcester, MA<br>Aug 2022 – May 2024 · GPA 3.71/4.0</div>
+      </div>
+      <div class="card">
+        <h3>B.E. Electronics &amp; Communication Engineering</h3>
+        <div class="meta">Loyola-ICAM College of Engineering &amp; Technology · Chennai, India<br>Jul 2015 – May 2019 · 7.8/10</div>
+      </div>
+    </div>
+    <p class="lang"><strong>Languages:</strong> English, Hindi, Telugu, Tamil</p>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div>
+      <h2 style="margin-bottom:8px">Let's build something.</h2>
+      <p><a href="mailto:satyaam.official@gmail.com">satyaam.official@gmail.com</a> · <a href="tel:+15134436568">+1 (513) 443-6568</a><br>Worcester, MA — open to relocate anywhere in the USA.</p>
+      <span class="avail">Open to AI Product Engineer roles</span>
+    </div>
+    <p>© 2026 Monisha Panchakalla Satya</p>
+  </div>
+</footer>
+
+</body>
+</html>
